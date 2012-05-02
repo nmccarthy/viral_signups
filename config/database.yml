@@ -17,7 +17,7 @@ development:
   encoding: unicode
   database: halfass_development
   pool: 5
-  username: halfass
+  username: postgres
   password:
 
   # Connect on a TCP socket. Omitted by default since the client uses a
