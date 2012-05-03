@@ -1,7 +1,485 @@
-/*
- * This is a manifest file that'll automatically include all the stylesheets available in this directory
- * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
- * the top of the compiled file, but it's generally better to create a new file per style scope.
- *= require_self
- *= require_tree . 
-*/
+/*======================= Top level styles =======================*/
+
+body, select, textarea, h1, h2, h3, h4, h5, h6, p, td, th, ul, li, label {
+  color: #636363;
+  font-family: Arial, sans-serif;  
+}
+
+body {
+	background: #e6e6e6 url('/assets/background_gradient.png') repeat-x left top;
+	font-size: 14px;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+	font-family: Arial, sans-serif;
+	color: #39c;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+h1 {
+	color: #636363;
+	font-size: 30px;
+	font-weight: normal;
+}
+
+h2 {
+	color: #636363;
+	font-size: 24px;
+	font-weight: normal;
+}
+
+p {
+	font-size: 13px;
+	color: #636363;
+	font-size: 18px;
+	margin: 0;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+}
+
+li {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+
+img {
+	border: none;
+}
+
+/*======================= Form styles =======================*/
+
+form {
+	margin: 0 auto;
+	width: 500px;
+}
+
+label {
+	font-size: large;
+#	vertical-align: top;
+}
+
+select {
+	font-size: x-large;
+}
+
+input {
+	font-family: Arial, sans-serif;
+	font-size: 18px;
+	color: #636363;
+	border: solid 1px #636363;
+	background-color: #ffffff;
+}
+
+input[type=file] {
+  border: 0;
+  margin: 0;
+}
+
+textarea {
+	font-family: Arial, sans-serif;
+	font-size: 18px;
+	height: 120px;
+}
+
+.actions input {
+	background-color: #fda000;
+	color: #ffffff;
+	border: none;
+	padding: 5px 10px;
+	margin-top: 25px;
+	cursor: pointer;
+}
+
+#error_explanation {
+	background-color: #ED8172;
+	border: solid 1px #7D1E0F;
+	margin-bottom: 10px;
+}
+
+#error_explanation h2 {
+	color: #7D1E0F;
+	font-size: 14px;
+	font-style: italic;
+	margin: 0 5px;
+}
+
+#error_explanation ul li {
+	color: #7D1E0F;
+}
+
+.field {
+	margin-top: 15px;
+}
+
+.field .text_area_label {
+	vertical-align: top;
+}
+
+.field_with_errors {
+	display: inline;
+}
+
+.field_with_errors label {
+	color: #7D1E0F !important;
+}
+
+.field_with_errors input {
+	border: solid 2px #7D1E0F;
+}
+
+.grouped_activity_properties {
+	background: #ebebeb;
+	border: solid 1px #636363;
+	padding-bottom: 10px;
+	margin-top: 10px;
+}
+
+.grouped_activity_properties h2 {
+	margin: 5px 0;
+}
+
+/*======================= Table styles =======================*/
+
+table {
+	margin: 0 auto;
+	width: 500px;
+}
+
+table td {
+	font-size: 18px;
+	padding-bottom: 15px;
+	text-align: left;
+}
+
+table .icon {
+	width: 30px;
+}
+
+/*======================= Header styles =======================*/
+
+header {
+	height: 42px;
+	display: block;
+}
+
+.logo {
+	margin: 8px 40px;
+	float: left;
+}
+
+.head_links {
+	margin: 5px 40px 0 0;
+	float: right;
+	color: white;
+	height: 25px;
+	line-height: 25px;
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+}
+
+.head_links li {
+	float: right;
+	margin-left: 15px;
+	overflow: hidden;
+	height: 25px;
+	line-height: 25px;
+	color: #ffffff;
+}
+
+.head_links li a {
+	color: #ffffff;
+	display: block;
+	height: 25px;
+}
+
+.head_links li a img {
+	float: left;
+	margin: 5px 4px 0 0;
+}
+
+.head_links li a:hover {
+	text-decoration: underline;
+}
+
+/*======================= Body styles =======================*/
+
+#page_div {
+	background-color: #ffffff;
+	padding: 5px 0 40px 0;
+	text-align: center;
+}
+
+#notice, #alert {
+	width: 500px;
+	margin: 0 auto;
+	text-align: center;
+	background: #C8D3E0;
+	color: #297CA6;
+}
+
+#temp_params {
+	font-size: 18px;
+	margin-top: 20px;
+}
+
+#breadcrumbs {
+	text-align: left;
+	padding: 5px 0 10px 0;
+	text-indent: 40px;
+}
+
+#breadcrumbs ul li {
+	display: inline;
+	font-size: 18px;
+}
+
+#advanced_features {
+	margin: 100px 0 0 0;
+}
+
+.group_header {
+	text-align: left;
+	width: 600px;
+	margin: 10px auto 10px auto;
+}
+
+.thread_starters {
+	width: 500px;
+	margin: 0 auto;
+}
+
+.thread_starters li, .apps li {
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+
+.message_text {
+	border: solid 1px #ebebeb;
+	padding: 10px;
+	text-align: left;
+	overflow: hidden;
+}
+
+.reply_message {
+	background-color: #ebebeb;
+	padding: 3px 0 3px 5px;
+	margin: 5px 0 0 25px;
+	text-align: left;
+}
+
+.message_replies {
+	float: left;
+	padding-left: 5px;
+}
+
+.delete_message {
+	float: right;
+	padding-right: 5px;
+}
+
+.edit_message_icon {
+	float: right;
+	padding-right: 5px;
+}
+
+.reply_link {
+	text-align: right;
+}
+
+.message_app {
+	font-size: 12px;
+	font-style: italic;
+}
+
+.tip {
+	font-size: 12px;
+	font-style: italic;
+}
+
+#bot_table {
+	width: 750px;
+}
+
+.bot_email_cell {
+	font-size: 16px;
+}
+
+.app_consumer_key_cell {
+	font-size: 14px;
+	font-family: Courier;
+}
+
+.use_case_nav {
+	font-size: 18px;
+}
+
+.use_case_nav li {
+	padding: 10px 0;
+}
+
+#activity_stories {
+	width: 500px;
+	margin: 0 auto;
+}
+
+#activity_stories li {
+	border: solid 1px #ebebeb;
+	margin: 20px 0;
+	padding: 10px;
+	overflow: hidden;
+}
+
+.activity_app {
+	float: left;
+	font-size: 12px;
+	font-style: italic;
+}
+
+.edit_activity {
+	float: right;
+	padding-right: 5px;
+}
+
+.delete_activity {
+	float: right;
+}
+
+.disclaimer {
+	text-align: center;
+	font-size: small;
+}
+
+#log_in {
+	width: 960px;
+	margin: 0 auto;
+}
+
+#log_in p {
+	margin-top: 20px;
+}
+
+#yc_error {
+	width: 960px;
+	margin: 0 auto;
+}
+
+#no_invite p, #yc_error p {
+	margin-top: 20px;
+}
+
+#yc_instructions {
+	text-align: left;
+	margin-left: 250px;
+}
+
+#yc_error li {
+	list-style-type: disc;
+	margin-left: 17px;
+}
+
+#yc_error ul {
+	margin-top: 5px;
+}
+
+.apps {
+	width: 500px;
+	margin: 0 auto;
+}
+
+.event_date, .event_app, .praise_app {
+	font-size: 12px;
+	font-style: italic;
+}
+
+.event_date {
+	float: left;
+}
+
+.event_duration {
+	float: right;
+	margin-right: 5px;
+}
+
+.event_location {
+	font-size: 15px;
+}
+
+.event_description {
+	font-size: 15px;
+}
+
+.praise_title {
+	line-height: 45px;
+	height: 45px;
+}
+
+.praise_badge {
+	float: right;
+	margin-right: 3px;
+	vertical-align: bottom;
+}
+
+.idea_description, .announcement_description {
+	font-size: 16px;
+}
+
+.sort_order_entry input {
+	width: 25px;
+}
+
+.sort_order_entry {
+	float: right;
+	height: 25px;
+	line-height: 25px;
+}
+
+.announcement_group {
+	float: left;
+	height: 25px;
+	line-height: 25px;
+}
+
+.message_type {
+	float: right;
+}
+
+#sort_tabs {
+	width: 960px;
+	margin: 0 auto;
+}
+
+#sort_tabs div {
+	background-color: white;
+}
+
+.status_link {
+	font-size: large;
+}
+
+#activity_stories a {
+	color: #3399cc;
+}
+
+.cancel_button {
+	font-size: 14px;
+	margin-left: 24px;
+}
+
+/*======================= Footer styles =======================*/
+
+.copyright {
+	font-size: 11px;
+	color: #333333;
+	float: left;
+	margin-left: 40px;
+	padding: 10px 0;
+}

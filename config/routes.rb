@@ -1,4 +1,13 @@
 Halfass::Application.routes.draw do
+  root :to => "programs#index"
+  
+  resources :programs
+  
+  match "/auth/yammer/callback" => "sessions#create"
+  match "/signout" => "sessions#destroy", :as => :signout
+  match "/login" => "sessions#new", :as => :login
+  match "/programs/:id/signup" => "programs#signup"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

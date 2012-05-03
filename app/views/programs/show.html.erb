@@ -1,0 +1,18 @@
+<p>
+  <b>Name:</b>
+  <%= @program.name %>
+</p>
+
+<p>
+  <b>Summary:</b>
+  <%= @program.summary %>
+</p>
+
+<p>Interested in signing up?</p>
+<a href="/programs/2/signup">Sign Up</a>
+
+<br />
+<br />
+
+<%= link_to 'Edit', edit_program_path(@program) %> |
+<%= link_to 'Back', programs_path %>

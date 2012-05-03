@@ -11,6 +11,30 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 0) do
+ActiveRecord::Schema.define(:version => 20120503011658) do
+
+  create_table "programs", :force => true do |t|
+    t.string   "name"
+    t.text     "summary"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+  end
+
+  create_table "programs_users", :id => false, :force => true do |t|
+    t.integer "program_id"
+    t.integer "user_id"
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "provider"
+    t.integer  "uid"
+    t.string   "access_token"
+    t.string   "email"
+    t.string   "image_url"
+    t.string   "full_name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

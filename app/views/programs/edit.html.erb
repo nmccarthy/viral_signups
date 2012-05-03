@@ -1,0 +1,11 @@
+<h1>Editing program</h1>
+
+<%= render 'form' %>
+
+<ul>
+	<% @program_users.each do |user| %>
+		<li><%= user.email if user.email != nil %></li>
+	<% end %>
+</ul>
+<%= link_to 'Show', @program %> |
+<%= link_to 'Back', programs_path %>

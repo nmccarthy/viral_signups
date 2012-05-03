@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Halfass</title>
-  <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "application" %>
+  <title>I Want In</title>
+  <%= stylesheet_link_tag "application" %>
   <%= csrf_meta_tags %>
+
 </head>
 <body>
 
-<%= yield %>
+  <div id="page_container">
+	<header>
+	  <%= render :partial => "/shared/header" -%>
+	</header>
 
+	<div id="page_div">
+		<p id="notice"><%= notice %></p>
+		<p id="alert"><%= alert %></p>		
+		<%= yield %>
+	</div>
+
+    <footer>
+      <%= render :partial => "/shared/footer" -%>
+    </footer>
+  </div> <!-- /page_container -->
 </body>
 </html>

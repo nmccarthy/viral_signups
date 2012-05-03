@@ -1,0 +1,8 @@
+<%= link_to image_tag('ysc_pg.png'), "/", :class => "logo" %>
+
+<ul class="head_links">
+  <% if !current_user.nil? %>
+	<li><%= link_to "Sign Out", signout_path %></li>
+	<li><%= current_user.full_name %></li>
+  <% end %>
+</ul>
