@@ -1,15 +1,10 @@
-<p>
-  <b>Name:</b>
-  <%= @program.name %>
-</p>
+<h1><%= @program.name %></h1>
 
-<p>
-  <b>Summary:</b>
+<h2>
   <%= @program.summary %>
-</p>
+</h2>
 
-<p>Interested in signing up?</p>
-<a href="/programs/2/signup">Sign Up</a>
+<p>Interested in this? <%= link_to "Sign Up", "/programs/" + @program.id.to_s + "/signup", :class => "orange_button" %></p>
 
 <br />
 <br />

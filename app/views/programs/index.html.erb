@@ -1,25 +1,12 @@
-<h1>Listing programs</h1>
+<h1>Your Programs (<%= link_to 'New', new_program_path %>)</h1>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Summary</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
+<table class="user_signups">
 <% @programs.each do |program| %>
   <tr>
     <td><%= program.name %></td>
-    <td><%= program.summary %></td>
-    <td><%= link_to 'Show', program %></td>
-    <td><%= link_to 'Edit', edit_program_path(program) %></td>
-    <td><%= link_to 'Destroy', program, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= program.users.count %> signups </td>
+    <td><%= link_to image_tag("hyperlink.gif"), program %></td>
+    <td><%= link_to 'Details', edit_program_path(program) %></td>
   </tr>
 <% end %>
 </table>
-
-<br />
-
-<%= link_to 'New Program', new_program_path %>

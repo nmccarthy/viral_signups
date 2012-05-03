@@ -1,3 +1,17 @@
+/*======================= Hack Day May 2012 Styles =======================*/
+
+#edit_container {
+	overflow: hidden;
+}
+
+#program_info {
+	float: left;
+}
+
+#signups {
+	float: right;
+}
+
 /*======================= Top level styles =======================*/
 
 body, select, textarea, h1, h2, h3, h4, h5, h6, p, td, th, ul, li, label {
@@ -118,6 +132,10 @@ textarea {
 
 .field {
 	margin-top: 15px;
+}
+
+.field label {
+	vertical-align: top;
 }
 
 .field .text_area_label {

@@ -7,6 +7,7 @@ Halfass::Application.routes.draw do
   match "/signout" => "sessions#destroy", :as => :signout
   match "/login" => "sessions#new", :as => :login
   match "/programs/:id/signup" => "programs#signup"
+  match "/thanks" => "programs#thanks"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

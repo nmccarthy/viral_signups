@@ -1,4 +1,6 @@
 class ProgramsController < ApplicationController
+  require 'net/https'
+  
   # GET /programs
   # GET /programs.json
   def index
@@ -71,8 +73,6 @@ class ProgramsController < ApplicationController
           "Content-Length" => payload.length.to_s
         })
 
-        p "++++++++++++" + raw_response.code.to_s + "++++++++++++"
-
         format.html { redirect_to @program, notice: 'Program was successfully created.' }
         format.json { render json: @program, status: :created, location: @program }
       else
@@ -113,10 +113,38 @@ class ProgramsController < ApplicationController
   def signup
     @program = Program.find(params[:id])
     @program.users << current_user
+    token = current_user.access_token
     
     respond_to do |format|
-      format.html { redirect_to programs_url }
+      payload = JSON.generate(
+      {
+        :activity   => {
+          :actor    => {
+            :name   => current_user.full_name,
+            :email  => current_user.email
+          },
+          :action   => 'update',
+          :object   => {
+            :url    => 'http://localhost:3000/programs/' + @program.id.to_s,
+            :type   => 'page',
+            :title  => @program.name
+          },
+          :message => 'Signed Up'
+        }
+      })
+
+      connection = Net::HTTP.new("www.yammer.com", 443) # Create the connection to Yammer API
+      connection.use_ssl = true # Enable SSL
+
+      raw_response = connection.post("https://www.yammer.com/api/v1/activity.json?access_token=#{token}", payload, {
+        "Content-Type" => "application/json",
+        "Content-Length" => payload.length.to_s
+      })
+      format.html { redirect_to '/thanks' }
       format.json { head :ok }
     end
+  end
+  
+  def thanks
   end
 end
