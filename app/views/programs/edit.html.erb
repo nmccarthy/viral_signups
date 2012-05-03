@@ -1,18 +1,15 @@
 <h1>Program: <%= @program.name %></h1>
-
 <div id="edit_container">
 	<div id="program_info">
 		<%= render 'form' %>
 	</div>
 
 	<div id="signups">
-		<h2>You have <%= @program_users.count %> signups!</h2>
 		<table>
+			<tr><td><h2>You have <%= @program_users.count %> signups!</h2></td></tr>
 			<% @program_users.each do |user| %>
 				<% if user.email != nil %>
-					<tr>
-						<td><%= user.full_name %></td>
-						<td><%= user.email %></td>
+					<tr><td><%= user.full_name %></td></tr>
 				<% end %>
 			<% end %>
 		</table>

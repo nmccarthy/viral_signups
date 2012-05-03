@@ -12,6 +12,10 @@
 	float: right;
 }
 
+#signups table td {
+	text-align: center;
+}
+
 /*======================= Top level styles =======================*/
 
 body, select, textarea, h1, h2, h3, h4, h5, h6, p, td, th, ul, li, label {
