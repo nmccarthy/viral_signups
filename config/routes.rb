@@ -3,6 +3,7 @@ Halfass::Application.routes.draw do
   
   resources :programs
   
+  match "/auth/yammer_redirect" => "sessions#redirect"
   match "/auth/yammer/callback" => "sessions#create"
   match "/signout" => "sessions#destroy", :as => :signout
   match "/login" => "sessions#new", :as => :login

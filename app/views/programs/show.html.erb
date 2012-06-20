@@ -5,9 +5,3 @@
 </h2>
 
 <p>Interested in this? <%= link_to "Sign Up", "/programs/" + @program.id.to_s + "/signup", :class => "orange_button" %></p>
-
-<br />
-<br />
-
-<%= link_to 'Edit', edit_program_path(@program) %> |
-<%= link_to 'Back', programs_path %>

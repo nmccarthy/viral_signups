@@ -5,11 +5,21 @@
 	</div>
 
 	<div id="signups">
-		<table>
-			<tr><td><h2>You have <%= @program_users.count %> signups!</h2></td></tr>
+		<p>Sign Up Link: <%= link_to("http://localhost:3000/programs/" + params[:id], "http://localhost:3000/programs/" + params[:id], :target => "_blank") %></p>
+		<h2>You have <%= @program_users.count %> signups!</h2>
 			<% @program_users.each do |user| %>
 				<% if user.email != nil %>
-					<tr><td><%= user.full_name %></td></tr>
+					<%= image_tag(user.image_url, :class => "header_photo") %> 
+					<%= link_to user.full_name, user.yammer_url, :target => "_blank" %>
+					<script data-app-id="kvGDzE1a5A125MtYlVa96g"
+					src="https://assets.yammer.com/platform/yam.js"></script>
+					<script> yam.connect.embedFeed({
+						container: "#embedded-feed",
+						network: "alpinestyle2-neilmccarthy.com",
+						feedType: "group",
+						feedId: "613117"});
+					</script>
+					<div id="embedded-feed"></div>
 				<% end %>
 			<% end %>
 		</table>

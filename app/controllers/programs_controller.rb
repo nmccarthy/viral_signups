@@ -60,7 +60,7 @@ class ProgramsController < ApplicationController
             :object   => {
               :url    => 'http://localhost:3000/programs/' + @program.id.to_s,
               :type   => 'page',
-              :title  => @program.name
+              :title  => @program.name + " signup form"
             }
           }
         })
@@ -73,8 +73,8 @@ class ProgramsController < ApplicationController
           "Content-Length" => payload.length.to_s
         })
 
-        format.html { redirect_to @program, notice: 'Program was successfully created.' }
-        format.json { render json: @program, status: :created, location: @program }
+        format.html { redirect_to  "/programs", notice: 'Program was successfully created.' }
+        format.json { render json: "/programs", status: :created, location: @programs }
       else
         format.html { render action: "new" }
         format.json { render json: @program.errors, status: :unprocessable_entity }
@@ -127,7 +127,7 @@ class ProgramsController < ApplicationController
           :object   => {
             :url    => 'http://localhost:3000/programs/' + @program.id.to_s,
             :type   => 'page',
-            :title  => @program.name
+            :title  => @program.name + " signup form"
           },
           :message => 'Signed Up'
         }

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120503011658) do
+ActiveRecord::Schema.define(:version => 20120503171454) do
 
   create_table "programs", :force => true do |t|
     t.string   "name"
@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(:version => 20120503011658) do
     t.string   "full_name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "yammer_url"
   end
 
 end

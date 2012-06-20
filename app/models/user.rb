@@ -8,6 +8,8 @@ class User < ActiveRecord::Base
       user.full_name = auth["info"]["full_name"]
       user.access_token = auth["credentials"]["token"]
       user.email = auth["info"]["email"]
+      user.yammer_url = auth["info"]["urls"]["yammer"]
+      user.image_url = auth["info"]["image"]
     end
   end
 end

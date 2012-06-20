@@ -4,5 +4,6 @@
   <% if !current_user.nil? %>
 	<li><%= link_to "Sign Out", signout_path %></li>
 	<li><%= current_user.full_name %></li>
+	<li><%= image_tag(current_user.image_url, :class => "header_photo") %></li>
   <% end %>
 </ul>
